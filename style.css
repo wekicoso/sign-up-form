@@ -72,31 +72,30 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3vh;
-    background-color: rgb(226, 232, 238);
-
+    background-color: rgb(239, 242, 245);
     font-family: "Coolvetica";
 }
 
 .right>div {
     padding: 1.5vh 4%;
+    margin: 1vh 0;
 }
 
 .form-wrapper {
     background-color: white;
     box-shadow: 0 5px 15px -15px gray;
-    height: 36vh;
+    min-height: 350px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    justify-content: center;
 }
 
 #main-form {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10%;
     height: 100%;
 }
@@ -104,10 +103,6 @@ form {
 .row {
     display: flex;
     gap: 10%;
-}
-
-div.button {
-    padding-top: 0;
 }
 
 button[type="submit"] {
@@ -122,7 +117,6 @@ button[type="submit"] {
     font-size: 1rem;
 }
 
-
 .text p:first-child {
     line-height: 1.4;
     font-size: 1.7rem;
@@ -131,7 +125,6 @@ button[type="submit"] {
 
 .text p:first-child+p {
     font-size: 1.7rem;
-    margin-bottom: 3vh;
 }
 
 .button>p {

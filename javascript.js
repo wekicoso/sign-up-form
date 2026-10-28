@@ -50,13 +50,3 @@ function changeColorOfPwExplain() {
     toogleColor();
 }
 
-function validatePasswords() {
-    if (pwConfirm.value !== pw.value) {
-        pwConfirm.setCustomValidity("Passwords do not match");
-    } else {
-        pwConfirm.setCustomValidity("");
-    }
-}
-
-pwConfirm.addEventListener("input", validatePasswords);
-pw.addEventListener("input", validatePasswords);
