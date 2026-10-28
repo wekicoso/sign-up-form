@@ -21,8 +21,8 @@
         <div class="text">
             <p>
                 You learned enough. Your brain is full of selectors, functions, flexboxes, and mysterious errors you
-                somehow fixed without
-                knowing why. At decOdin, we believe knowledge is temporary — confusion is forever.
+                somehow fixed without knowing why.
+                At decOdin, we believe knowledge is temporary — confusion is forever.
             </p>
             <p>
                 Sign up today and start forgetting.
@@ -31,37 +31,56 @@
 
 
         <div class="form-wrapper">
-            <form id="main-form">
+            <form id="main-form" action="" method="get">
                 <h1>Let's do this!</h1>
                 <div class="row row-1">
-                    <label for="first-name">FIRST NAME
-                        <input type="text" id="first-name" name="first-name">
+                    <label for="first-name">FIRST NAME *
+                        <input type="text" id="first-name" name="first-name" maxlength="20" required>
+                        <span></span>
                     </label>
-                    <label for="last-name">LAST NAME
-                        <input type="text" id="last-name" name="last-name">
+                    <label for="last-name">LAST NAME *
+                        <input type="text" id="last-name" name="last-name" maxlength="20" required>
+                        <span></span>
                     </label>
+
                 </div>
                 <div class="row row-2">
-                    <label for="email">EMAIL
-                        <input type="email" id="email" name="email">
+                    <label for="email">EMAIL *
+                        <input type="email" id="email" name="email" required>
+                        <span></span>
                     </label>
+
                     <label for="phone">PHONE NUMBER
-                        <input type="tel" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" minlength="6">
                     </label>
                 </div>
                 <div class="row row-3">
-                    <label for="password">PASSWORD
-                        <input type="password" id="password" name="password">
+                    <label for="password">PASSWORD *
+                        <input type="password" id="password" maxlength="12" name="password" required
+                            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).+">
+                        <span></span>
+                        <div class="pw-explain">
+                            <p>* 1 uppercase letter</p>
+                            <p>* 1 lowercase letter</p>
+                            <p>* 1 number</p>
+                        </div>
                     </label>
-                    <label for="confirm-password">CONFIRM PASSWORD
-                        <input type="password" id="confirm-password" name="confirm-password">
+
+                    <label for="confirm-password">CONFIRM PASSWORD *
+                        <input type="password" id="confirm-password" maxlength="12" name="confirm-password" required
+                            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).+">
+                        <span></span>
                     </label>
+
+
+
                 </div>
             </form>
         </div>
 
         <div class="button">
             <button type="submit" form="main-form">Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
         </div>
     </div>
 </body>

@@ -1,10 +1,19 @@
 @font-face {
     font-family: 'Norse';
     src: url('./fonts/Norse-Bold.woff2') format('woff2');
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('./fonts/coolvetica/Coolvetica-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 * {
     margin: 0;
@@ -21,10 +30,6 @@ body {
     margin: 0 auto;
 }
 
-.right {
-    flex: 1.8;
-    width: 100%;
-}
 
 .left {
     position: relative;
@@ -62,21 +67,25 @@ body {
 /* Right side styiling */
 
 .right {
+    width: 100%;
     flex: 1.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 3vh;
     background-color: rgb(226, 232, 238);
+
+    font-family: "Coolvetica";
 }
 
-.right > div {
+.right>div {
     padding: 1.5vh 4%;
 }
 
 .form-wrapper {
     background-color: white;
     box-shadow: 0 5px 15px -15px gray;
+    height: 36vh;
 }
 
 form {
@@ -85,26 +94,103 @@ form {
     gap: 2vh;
 }
 
+#main-form {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    height: 100%;
+}
+
 .row {
     display: flex;
     gap: 10%;
 }
 
-input {
-    display: block;
-}
-
-.right div.button {
+div.button {
     padding-top: 0;
 }
 
 button[type="submit"] {
-    width: 35%;
-    padding: 15px 30px;
+    padding: 18px 50px;
     border-radius: 0.7rem;
     box-shadow: none;
     cursor: pointer;
     background-color: rgb(29 40 55);
     color: white;
-    border: 1px solid black;
+    font-family: "Coolvetica";
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+
+
+.text p:first-child {
+    line-height: 1.4;
+    font-size: 1.7rem;
+    margin-bottom: 3vh;
+}
+
+.text p:first-child+p {
+    font-size: 1.7rem;
+    margin-bottom: 3vh;
+}
+
+.button>p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+input {
+    display: block;
+    height: 25px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #E5E7EB;
+    padding-left: 6px;
+}
+
+input:focus {
+    border: 1px solid blue;
+    box-shadow: inset 0px 0px 3px 3px lightblue;
+}
+
+label {
+    width: 33%;
+    position: relative;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+input + span {
+    position: absolute;
+    right: -18px;
+    bottom: 5px;
+    line-height: 1;
+}
+
+input:invalid + span::after {
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::after {
+  content: "✓";
+  color: green;
+}
+
+.form-wrapper div.pw-explain {
+    display: block;
+    position: absolute;
+    font-family: serif;
+    font-size: 0.8rem;
+    padding: 3px 0 0 15px;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.green-text {
+    color: green;
 }
