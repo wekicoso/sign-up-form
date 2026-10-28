@@ -19,7 +19,6 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    border: 1px solid black;
 }
 
 .right {
@@ -55,7 +54,7 @@ body {
     font-size: clamp(1rem, calc(1rem + 8vw), 7rem);
 }
 
-.left-content > img {
+.left-content>img {
     width: 30%;
     height: 12rem;
 }
@@ -63,16 +62,49 @@ body {
 /* Right side styiling */
 
 .right {
-    flex: 1;
-    margin: 0 4%;
+    flex: 1.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 7vh;
+    gap: 3vh;
+    background-color: rgb(226, 232, 238);
 }
 
+.right > div {
+    padding: 1.5vh 4%;
+}
 
+.form-wrapper {
+    background-color: white;
+    box-shadow: 0 5px 15px -15px gray;
+}
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
 
+.row {
+    display: flex;
+    gap: 10%;
+}
 
+input {
+    display: block;
+}
 
+.right div.button {
+    padding-top: 0;
+}
+
+button[type="submit"] {
+    width: 35%;
+    padding: 15px 30px;
+    border-radius: 0.7rem;
+    box-shadow: none;
+    cursor: pointer;
+    background-color: rgb(29 40 55);
+    color: white;
+    border: 1px solid black;
+}

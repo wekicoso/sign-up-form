@@ -18,10 +18,56 @@
         </div>
     </div>
     <div class="right">
-        <div> some text</div>
-        <div> forma </div>
-        <div> create account</div>
+        <div class="text">
+            <p>
+                You learned enough. Your brain is full of selectors, functions, flexboxes, and mysterious errors you
+                somehow fixed without
+                knowing why. At decOdin, we believe knowledge is temporary — confusion is forever.
+            </p>
+            <p>
+                Sign up today and start forgetting.
+            </p>
+        </div>
+
+
+        <div class="form-wrapper">
+            <form id="main-form">
+                <h1>Let's do this!</h1>
+                <div class="row row-1">
+                    <label for="first-name">FIRST NAME
+                        <input type="text" id="first-name" name="first-name">
+                    </label>
+                    <label for="last-name">LAST NAME
+                        <input type="text" id="last-name" name="last-name">
+                    </label>
+                </div>
+                <div class="row row-2">
+                    <label for="email">EMAIL
+                        <input type="email" id="email" name="email">
+                    </label>
+                    <label for="phone">PHONE NUMBER
+                        <input type="tel" id="phone" name="phone">
+                    </label>
+                </div>
+                <div class="row row-3">
+                    <label for="password">PASSWORD
+                        <input type="password" id="password" name="password">
+                    </label>
+                    <label for="confirm-password">CONFIRM PASSWORD
+                        <input type="password" id="confirm-password" name="confirm-password">
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <div class="button">
+            <button type="submit" form="main-form">Create Account</button>
+        </div>
     </div>
 </body>
 
 </html>
+
+<!-- rgb(29, 40, 55) — glavna tamna pozadina
+rgb(156, 176, 199) — svetla plavo-siva za tekst i “dim”
+rgb(77, 91, 110) — srednja plavo-siva nijansa -->
